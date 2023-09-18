@@ -13,16 +13,18 @@
   <h3>点击以继续</h3>
 </div>
 
-<div id="grid-container">
+
 
   <div id="img_div">
     <img src="" id="img" alt="模型没有预测这种情况" hidden="true" style="">
   </div>
 
+  <div class="clean"></div>
+
   <div id="container">
 
     <i>&nbsp;&nbsp;&nbsp;label</i>
-    <select id="label" style="">
+    <select id="label">
       <option value="none" selected disabled hidden>请选择</option> 
       <option value="0">0</option>
       <option value="1">1</option>
@@ -30,7 +32,7 @@
     </select>
 
     <i>&nbsp;&nbsp;pred</i>
-    <select id="pred" style="">
+    <select id="pred">
       <option value="none" selected disabled hidden>请选择</option> 
       <option value="0">0</option>
       <option value="1">1</option>
@@ -39,16 +41,16 @@
 
 
     <div id="switch_img" hidden="true">
-      <button id="1" onclick="switchTo1(label_val,pred_val)">1</button>
-      <button id="2" onclick="switchTo2(label_val,pred_val)">2</button>
-      <button id="3" onclick="switchTo3(label_val,pred_val)">3</button>
+      <button id="button1" onclick="switchTo1(label_val,pred_val)">1</button>
+      <button id="button2" onclick="switchTo2(label_val,pred_val)">2</button>
+      <button id="button3" onclick="switchTo3(label_val,pred_val)">3</button>
     </div>
 
   </div>
 
 
 
-</div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script>
@@ -65,18 +67,27 @@
     // 切换到图片1
     function switchTo1(label, pred) {
       img_src = "./img/" + label_val + "_" + pred_val + "_1.png";
+      document.getElementById("button1").style.backgroundColor = "#4d4d4d";
+      document.getElementById("button2").style.backgroundColor = "#e7e7e7";
+      document.getElementById("button3").style.backgroundColor = "#e7e7e7";
       $('#img').attr('src', img_src);
     }
 
     // 切换到图片2
     function switchTo2(label, pred) {
       img_src = "./img/" + label_val + "_" + pred_val + "_2.png";
+      document.getElementById("button2").style.backgroundColor = "#4d4d4d";
+      document.getElementById("button1").style.backgroundColor = "#e7e7e7";
+      document.getElementById("button3").style.backgroundColor = "#e7e7e7";
       $('#img').attr('src', img_src);
     }
 
     // 切换到图片2
     function switchTo3(label, pred) {
       img_src = "./img/" + label_val + "_" + pred_val + "_3.png";
+      document.getElementById("button3").style.backgroundColor = "#4d4d4d";
+      document.getElementById("button2").style.backgroundColor = "#e7e7e7";
+      document.getElementById("button1").style.backgroundColor = "#e7e7e7";
       $('#img').attr('src', img_src);
     }
 

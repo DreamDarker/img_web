@@ -1,8 +1,4 @@
-#grid_container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 10px;
-}
+
 
 h1 {
     text-align: center;
@@ -26,8 +22,9 @@ h3 {
     /* background-color: chocolate; */
     font-size: 40px;
     height: 80vmin;
-    max-width: 100%;
+    width: auto;
     text-align: center;
+    z-index: 1;
 }
 
 #img {
@@ -35,16 +32,18 @@ h3 {
     width: auto;
     max-width: 100%;
     text-align: center;
+    z-index: 1;
 }
 
-
+.clean{
+    clear:both;
+}
 
 #container {
     /* background: #249ff1; */
-    min-width: 800px;
-    max-height: 10vmin;
-    width: 195vmin;
-    height: 95vmin;
+    min-width: 300px;
+    width: auto;
+    height: auto;
     margin: 10px;
     font-size: 100%;
 
@@ -67,10 +66,31 @@ select option {
 }
   
 #switch_img {
-    width: 10%;
     height: auto;
     vertical-align: middle;
-    float: right;
     font-size: 20px;
-    padding-right: 0%;
+    float: right;
+    z-index: 2;
 }
+
+button {
+    min-width: 30px;
+    min-height: 20px;
+    height: 15%;
+    width: 10%;
+    text-align: center;
+    border: 2px solid #ccc;
+    background-color: #e7e7e7;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+
+button:hover {
+    min-width: 30px;
+    min-height: 20px;
+    height: 15%;
+    width: 10%;
+    border-radius: 2px;
+    background-color: #4d4d4d;
+  }
