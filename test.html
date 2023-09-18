@@ -1,0 +1,17 @@
+<div id="div">
+  <img src="image.jpg" alt="图片">
+  <button onclick="handleClick()">点击按钮</button>
+</div>
+
+<script>
+  function handleClick(event) {
+    // 将图片元素的 src 属性设置为空白
+    const img = event.target.querySelector("img");
+    img.src = "";
+
+    // 在 div 元素中添加一个 span 元素，并设置 span 元素的 textContent 属性为文本
+    const span = document.createElement("span");
+    span.textContent = "这是文本";
+    document.getElementById("div").appendChild(span);
+  }
+</script>
