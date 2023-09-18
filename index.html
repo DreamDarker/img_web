@@ -6,15 +6,22 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+<div id="headline" onclick="removeDiv()">
+  <h1>本界面是用于展示论文图例</h1>
+  <br/>
+  <h3>点击以继续</h3>
+</div>
+
 <div id="grid-container">
 
   <div id="img_div">
-    <img src="" id="img" alt="模型没有这种预测情况" hidden="true" style="">
+    <img src="" id="img" alt="模型没有预测这种情况" hidden="true" style="">
   </div>
 
   <div id="container">
 
-    <i>label</i>
+    <i>&nbsp;&nbsp;&nbsp;label</i>
     <select id="label" style="">
       <option value="none" selected disabled hidden>请选择</option> 
       <option value="0">0</option>
@@ -22,7 +29,7 @@
       <option value="2">2</option>
     </select>
 
-    <i>pred</i>
+    <i>&nbsp;&nbsp;pred</i>
     <select id="pred" style="">
       <option value="none" selected disabled hidden>请选择</option> 
       <option value="0">0</option>
@@ -37,34 +44,29 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script>
-    // 获取下选框
-    const select = document.querySelector("select");
 
-    // 监听页面缩放事件
-    window.addEventListener("resize", () => {
-        // 重新设置下选框的宽度和字体大小
-        select.style.width = window.innerWidth;
-        select.querySelectorAll("option").forEach((option) => {
-            option.style.fontSize = window.innerWidth / 100;
-            });
-    });
+
+    // 首页面元素删除
+    function removeDiv() {
+      var div = document.getElementById("headline");
+      div.remove();
+      document.getElementById("img").hidden = false;
+    }
 
     var label_val, pred_val, img_src;
     $(function() {
-      // 双下选框联动
+      // label选择
       $('#label').on('change', function() {
         label_val = $(this).val();
         img_src = "./img/" + label_val + "_" + pred_val + ".png";
         $('#img').attr('src', img_src);
-        document.getElementById("img").hidden = false;
       });
 
-      // 选择图片
+      // pred选择
       $('#pred').on('change', function() {
         pred_val = $(this).val();
         img_src = "./img/" + label_val + "_" + pred_val + ".png";
         $('#img').attr('src', img_src);
-        document.getElementById("img").hidden = false;
       });
     });
   </script>

@@ -6,37 +6,59 @@
 
 #container {
     /* background: #249ff1; */
-    min-width: 100vmin;
+    min-width: 800px;
     max-height: 10vmin;
-    width: 100vmin;
-    height: 10vmin;
+    width: 195vmin;
+    height: 95vmin;
     margin: 10px;
     text-align: left;
     font-size: 100%;
+
   }
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}  
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#headline {
+    background-color: #ccc;
+    text-align: center;
+    padding: 30vmin 0;
+}
+
+p {
+    font-size :18px;
+}  
+
+select {
+    height: 32px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
+  
+select option {
+    font-size: 18px;
+}
 
 #img_div {
     /* background-color: chocolate; */
     font-size: 40px;
-    min-height: 40vmin;
-    max-width: 200vmin;
-    max-height: 79vmin;
-    width: 200vmin;
-    height: 79vmin;
-    vertical-align: middle;
-    align-self: center;
-    align-items: center;
+    height: 80vmin;
+    max-width: 100%;
     text-align: center;
 }
 
 #img {
-    min-height: 40vmin;
-    max-width: 200vmin;
-    max-height: 79vmin;
-    width: 200vmin;
-    height: 79vmin;
+    height: auto;
+    width: auto;
+    max-width: 100%;
     text-align: center;
-    vertical-align: middle;
 }
   
   
