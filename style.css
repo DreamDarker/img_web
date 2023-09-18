@@ -6,29 +6,37 @@
 
 #container {
     /* background: #249ff1; */
-    width: 10vmin;
-    height: 100vmin;
+    min-width: 100vmin;
+    max-height: 10vmin;
+    width: 100vmin;
+    height: 10vmin;
     margin: 10px;
-    float:left;
-    text-align: center;
+    text-align: left;
     font-size: 100%;
-    flex-grow: 1;
   }
 
 #img_div {
     /* background-color: chocolate; */
     font-size: 40px;
-    width: 182vmin;
-    height: 72vmin;
-    float: right;
-    flex-grow: 1;
+    min-height: 40vmin;
+    max-width: 200vmin;
+    max-height: 79vmin;
+    width: 200vmin;
+    height: 79vmin;
+    vertical-align: middle;
+    align-self: center;
+    align-items: center;
+    text-align: center;
 }
 
 #img {
-    width: 182vmin;
-    height: 72vmin;
-    float:right;
+    min-height: 40vmin;
+    max-width: 200vmin;
+    max-height: 79vmin;
+    width: 200vmin;
+    height: 79vmin;
     text-align: center;
+    vertical-align: middle;
 }
   
   
