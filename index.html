@@ -7,11 +7,11 @@
 </head>
 <body>
 
-<div id="headline" onclick="removeDiv()">
-  <h1>本界面是用于展示论文图例</h1>
-  <br/>
-  <h3>点击以继续</h3>
-</div>
+  <div id="headline" onclick="removeDiv()">
+    <h1>本界面是用于展示论文图例</h1>
+    <br/>
+    <h3>点击以继续</h3>
+  </div>
 
 
 
@@ -23,28 +23,29 @@
 
   <div id="container">
 
-    <i>&nbsp;&nbsp;&nbsp;label</i>
-    <select id="label">
-      <option value="none" selected disabled hidden>请选择</option> 
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-    </select>
+    <span id="selection">
+      <i>&nbsp;&nbsp;&nbsp;label</i>
+      <select id="label">
+        <option value="none" selected disabled hidden>请选择</option> 
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
 
-    <i>&nbsp;&nbsp;pred</i>
-    <select id="pred">
-      <option value="none" selected disabled hidden>请选择</option> 
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-    </select>
+      <i>&nbsp;&nbsp;pred</i>
+      <select id="pred">
+        <option value="none" selected disabled hidden>请选择</option> 
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </span>
 
-
-    <div id="switch_img" hidden="true">
+    <span id="switch_img" hidden="true">
       <button id="button1" onclick="switchTo1(label_val,pred_val)">1</button>
       <button id="button2" onclick="switchTo2(label_val,pred_val)">2</button>
       <button id="button3" onclick="switchTo3(label_val,pred_val)">3</button>
-    </div>
+    </span>
 
   </div>
 
@@ -99,7 +100,7 @@
         img_src = "./img/" + label_val + "_" + pred_val + ".png";
         $('#img').attr('src', img_src);
         // 同参数下多图片的显示
-        // TODO: 1.根据同参数下图片数量显示按钮数（目前最大值为3），2.
+        // TODO: 1.根据同参数下图片数量显示按钮数（目前最大值为3），2.极端情况下的层叠覆盖问题
         if (label_val == 0 && pred_val == 1) {
           switchTo1(label_val,pred_val);
           document.getElementById("switch_img").hidden = false;

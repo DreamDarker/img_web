@@ -11,7 +11,7 @@ h3 {
 }
 
 #headline {
-    background-color: #ccc;
+    /* background-color: #ccc; */
     text-align: center;
     padding: 30vmin 0;
 }
@@ -25,6 +25,7 @@ h3 {
     width: auto;
     text-align: center;
     z-index: 1;
+    margin: 10px;
 }
 
 #img {
@@ -32,6 +33,7 @@ h3 {
     width: auto;
     max-width: 100%;
     text-align: center;
+    vertical-align: middle;
     z-index: 1;
 }
 
@@ -46,12 +48,20 @@ h3 {
     height: auto;
     margin: 10px;
     font-size: 100%;
-
+    z-index: 2;
+    margin: 10px;
 }
 
 p {
     font-size :18px;
 }  
+
+#selection {
+    width: auto;
+    padding-left: 5%;
+    margin: 10px;
+    width: 30%;
+}
 
 select {
     vertical-align: middle;
@@ -66,31 +76,27 @@ select option {
 }
   
 #switch_img {
+    width: auto;
     height: auto;
-    vertical-align: middle;
-    font-size: 20px;
-    float: right;
-    z-index: 2;
+    text-align:right;
+    width: 30%;
 }
 
 button {
-    min-width: 30px;
-    min-height: 20px;
-    height: 15%;
-    width: 10%;
-    text-align: center;
+    vertical-align: middle;
+    min-width: 40px;
+    min-height: 30px;
     border: 2px solid #ccc;
     background-color: #e7e7e7;
-    transition: all 0.2s ease-in-out;
-    z-index: 2;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    
 }
 
 
 button:hover {
-    min-width: 30px;
-    min-height: 20px;
-    height: 15%;
-    width: 10%;
+    min-width: 40px;
+    min-height: 30px;
     border-radius: 2px;
     background-color: #4d4d4d;
   }
